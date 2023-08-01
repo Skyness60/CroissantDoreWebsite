@@ -1,22 +1,25 @@
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 
 body {
+    margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.6;
+    display:flex;
+    flex-direction: column;
 }
 
+.margin-0 {
+    margin:0;
+}
 
 .nav-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     font-size: 1.50rem;
     border-bottom: 0.25rem outset #FFD700;
     background-color: #F5F5DC;
@@ -31,7 +34,7 @@ body {
 .title-logo {
     font-size: 2rem;
     font-weight: bold;
-    margin: 0;
+
 }
 
 
@@ -50,10 +53,134 @@ body {
     animation: rotate 10s linear infinite;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        left: -9999em;
+
+    }
+
+
+
+    details {
+        margin: 40px;
+      }
+      summary {
+        writing-mode: vertical-lr;
+        text-align: center;
+        padding: 12px 10px;
+        width: 23px;
+        height: 17px;
+        background-color: var(--primColor);
+        border: 2px solid var(--secoColor);
+        border-radius: var(--cornerRad);
+        color: var(--secoColor);
+        cursor: pointer;
+        user-select: none;
+        outline: none;
+        transition: transform 200ms ease-in-out 0s;
+      }
+      summary::before,
+      summary::after {
+        position: static;
+        top: 0;
+        left: 0;
+      }
+      summary::before {
+        content: "";
+      }
+      summary::after {
+        content: "III";
+        letter-spacing: -1px;
+      }
+      summary:hover {
+        transform: scale(1.1);
+      }
+      summary::marker {
+        font-size: 0;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] .menu {
+        animation-name: menuAnim;
+      }
+      details[open] summary::before {
+        content: "X";
+      }
+      details[open] summary::after {
+        content: "";
+      }
+      .menu {
+        height: 0;
+        width: fit-content;
+        border-radius: var(--cornerRad);
+        background-color: var(--primColor);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        animation: closeMenu 300ms ease-in-out forwards;
+      }
+      .menu a {
+        padding: 12px 24px;
+        margin: 0 16px;
+        color: var(--secoColor);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        text-align: center;
+        transition: filter 200ms linear 0s;
+      }
+      .menu a:nth-of-type(1) {
+        padding-top: 24px;
+      }
+      .menu a:nth-last-of-type(1) {
+        border-bottom: none;
+      }
+
+      details::before {
+ 
+        color: var(--secoColor);
+        position: absolute;
+        margin-left: 80px;
+        padding: 10px 10px;
+        opacity: 0.4;
+      }
+      details[open]::before {
+        animation: fadeMe 300ms linear forwards;
+      }
+
+        .menu a:hover {
+        color: #FFD700;
+    }
+      
+
+      @keyframes menuAnim {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 312px;
+        }
+      }
+      @keyframes fadeMe {
+        0% {
+          opacity: 0.4;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      
+      
+  }
+@media screen and (min-width:768px) {
+    .menu-details {
+        position: absolute;
+        left: -9999em;
+    }    
 }
 
 
@@ -78,6 +205,9 @@ body {
     color: #FFD700;
 }
 
+main {
+    flex:1;
+}
 
 .main-section {
     height: 80vh;
@@ -93,23 +223,23 @@ body {
 
 .main-content {
     max-width: 37.5rem;
-    margin: 0 auto;
+
 }
 
 .main-content h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+
 }
 
 .main-content p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+ 
 }
 
 .btn-cta {
     display: inline-block;
     background-color: #FFD700;
-    color: #fff;
+    color: #333;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 0.25rem;
@@ -125,7 +255,6 @@ body {
 
 .about-section h3 {
     font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 .about-section p {
@@ -140,7 +269,7 @@ body {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 0.25rem;
-    margin-top: 1rem;
+
 }
 
 .btn-more:hover {
@@ -148,7 +277,7 @@ body {
 }
 
 
-footer {
+.footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -156,6 +285,6 @@ footer {
 }
 
 footer p {
-    margin: 0;
+ 
 }
 
