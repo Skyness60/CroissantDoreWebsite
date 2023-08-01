@@ -1,125 +1,161 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
-    margin : 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
 }
 
 
 .nav-top {
-    display:flex;
-    justify-content: center;
-    gap: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
     font-size: 1.50rem;
-    background-color: rgb(246, 246, 246);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    border-bottom: 0.25rem outset #FFD700;
+    background-color: #F5F5DC;
 }
 
-main {
+.logo-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:3rem;
-}
-
-
-a {
-    text-decoration: none;
-}
-#header{
-    display: flex;
-    justify-content:center;
-    margin-top: 1.25rem;
-    height : 21.875rem;
-}
-
-.streamheader {
-    display: flex;
-    justify-content:center;
-    background-color: rgba(155, 155, 155, 0.9);
-    border-color: #000000;
-    border: 1rem;
-}
-
-.headerlive {
-    justify-content: left;
-    margin-top: 0.625rem;
-}
-
-.headervideo {
-    height : 21.875rem;
-    width: 33.125rem;
-}
-
-.headerstreamerimg {
-    height : 3.125rem;
-    border-radius: 1.875rem;
-    margin-top: 0.625rem;
-}
-
-.streamheadercard {
-    margin-left : 0.625rem;
-    margin-right : 0.1875rem;
-}
-
-.headerstreamer {
-    left : 0.9375rem;
-}
-.headernamestreamers {
-    margin-left : 3.75rem;
-    margin-top : -4.375rem;
-}
-
-.headergamestreamer {
-    margin-left : 3.8125rem;
-    margin-top : -0.9375rem;
-}
-
-.headerviewerstreamer {
-    margin-left : 3.75rem;
-    margin-top : -0.9375rem;
-}
-
-.headernamestylestreamer {
-    font-weight: bold;
-    color : #c90000;
-}
-
-.headergamestylestreamer {
-    color : #be0000;
-}
-
-.headertag {
-    display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
-.headertag_fr {
-    border-radius: 1.25rem;
-    height : 1.625rem;
-    width: 4rem;
-    background-color: #484848;
-    border-color: #484848;
-}
-
-.headertag_fr_style {
-    display: flex;
-    font-size: 0.75rem;
-    justify-content: center;
+.title-logo {
+    font-size: 2rem;
     font-weight: bold;
-    color : #b2b2b2;
+    margin: 0;
 }
 
-.headertag_fight {
-    border-radius: 1.25rem;
-    height : 1.625rem;
-    width: 4rem;
-    background-color: #484848;
-    border-color: #484848;
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.img-logo {
+    width: 4.7rem;
+    height: 4.7rem;
+    animation: rotate 10s linear infinite;
 }
 
-.headertag_fight_style {
+.nav-links {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color : #b2b2b2;
+    gap: 2rem;
 }
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+
+.nav-links li:hover {
+    color: #FFD700;
+}
+
+
+.main-section {
+    height: 80vh;
+    background-image: url('https://media.gettyimages.com/id/1143548242/fr/photo/femme-faisant-des-g%C3%A2teaux-dans-la-fabrication-de-g%C3%A2teau.jpg?s=612x612&w=0&k=20&c=gEILOS2Hl_THia1jkH7IbQ9ox1938MGxaIoBeOMkVSg='); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.main-content {
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+.main-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.btn-cta:hover {
+    background-color: #FFC400;
+}
+
+.about-section {
+    padding: 4rem;
+}
+
+.about-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.btn-more {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+.btn-more:hover {
+    background-color: #FFC400;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
