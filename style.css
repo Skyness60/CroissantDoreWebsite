@@ -6,26 +6,120 @@ body {
 .nav-top {
     display:flex;
     justify-content: center;
-    gap: 35px;
-    font-size: 22px;
+    gap: 3rem;
+    font-size: 1.50rem;
     background-color: rgb(246, 246, 246);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
-.symbole {
-    display:flex;
-    margin-top:-106px;
-    left: 20px;
-    font-size:100px;
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:3rem;
 }
 
 
-.nav-left:hover {
-    background: scroll;
-    background-color: rgb(246, 246, 246);
-    display:flex;
+a {
+    text-decoration: none;
+}
+#header{
+    display: flex;
+    justify-content:center;
+    margin-top: 1.25rem;
+    height : 21.875rem;
+}
+
+.streamheader {
+    display: flex;
+    justify-content:center;
+    background-color: rgba(155, 155, 155, 0.9);
+    border-color: #000000;
+    border: 1rem;
+}
+
+.headerlive {
     justify-content: left;
-    width: 210px;
-    height: 1000px;
+    margin-top: 0.625rem;
+}
+
+.headervideo {
+    height : 21.875rem;
+    width: 33.125rem;
+}
+
+.headerstreamerimg {
+    height : 3.125rem;
+    border-radius: 1.875rem;
+    margin-top: 0.625rem;
+}
+
+.streamheadercard {
+    margin-left : 0.625rem;
+    margin-right : 0.1875rem;
+}
+
+.headerstreamer {
+    left : 0.9375rem;
+}
+.headernamestreamers {
+    margin-left : 3.75rem;
+    margin-top : -4.375rem;
+}
+
+.headergamestreamer {
+    margin-left : 3.8125rem;
+    margin-top : -0.9375rem;
+}
+
+.headerviewerstreamer {
+    margin-left : 3.75rem;
+    margin-top : -0.9375rem;
+}
+
+.headernamestylestreamer {
+    font-weight: bold;
+    color : #c90000;
+}
+
+.headergamestylestreamer {
+    color : #be0000;
+}
+
+.headertag {
+    display: flex;
+    gap: 1rem;
+}
+
+.headertag_fr {
+    border-radius: 1.25rem;
+    height : 1.625rem;
+    width: 4rem;
+    background-color: #484848;
+    border-color: #484848;
+}
+
+.headertag_fr_style {
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: center;
+    font-weight: bold;
+    color : #b2b2b2;
+}
+
+.headertag_fight {
+    border-radius: 1.25rem;
+    height : 1.625rem;
+    width: 4rem;
+    background-color: #484848;
+    border-color: #484848;
+}
+
+.headertag_fight_style {
+    display: flex;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color : #b2b2b2;
 }
