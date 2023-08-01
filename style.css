@@ -1,0 +1,31 @@
+body {
+    margin : 0;
+}
+
+
+.nav-top {
+    display:flex;
+    justify-content: center;
+    gap: 35px;
+    font-size: 22px;
+    background-color: rgb(246, 246, 246);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.symbole {
+    display:flex;
+    margin-top:-106px;
+    left: 20px;
+    font-size:100px;
+}
+
+
+.nav-left:hover {
+    background: scroll;
+    background-color: rgb(246, 246, 246);
+    display:flex;
+    justify-content: left;
+    width: 210px;
+    height: 1000px;
+}
