@@ -252,6 +252,9 @@ main {
   overflow-x: hidden;
 }
 
+.shop-section li {
+  display:inline-block;
+}
 /*////////////////
 /////  About
 /////////////////*/
