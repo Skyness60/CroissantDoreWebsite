@@ -1,4 +1,8 @@
 
+/*////////////////
+/////  Main
+/////////////////*/
+
 * {
     box-sizing: border-box;
 }
@@ -16,92 +20,53 @@ body {
     margin:0;
 }
 
-.nav-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.50rem;
-    border-bottom: 0.25rem outset #FFD700;
-    background-color: #F5F5DC;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.title-logo {
-    font-size: 2rem;
-    font-weight: bold;
-
+.links {
+    text-decoration: none;
 }
 
 
-@keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+/*////////////////
+/////  Nav Phone
+/////////////////*/
 
-.img-logo {
-    width: 4.7rem;
-    height: 4.7rem;
-    animation: rotate 10s linear infinite;
-}
 
 @media screen and (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        left: -9999em;
+    .nav-links li {
+      display:none;
 
     }
 
-
-
-    details {
-        margin: 40px;
-      }
       summary {
         writing-mode: vertical-lr;
         text-align: center;
-        padding: 12px 10px;
         width: 23px;
         height: 17px;
-        background-color: var(--primColor);
-        border: 2px solid var(--secoColor);
-        border-radius: var(--cornerRad);
-        color: var(--secoColor);
         cursor: pointer;
         user-select: none;
         outline: none;
         transition: transform 200ms ease-in-out 0s;
       }
+
       summary::before,
       summary::after {
         position: static;
         top: 0;
         left: 0;
       }
-      summary::before {
-        content: "";
-      }
+
       summary::after {
         content: "III";
         letter-spacing: -1px;
       }
+
       summary:hover {
         transform: scale(1.1);
       }
+
       summary::marker {
         font-size: 0;
       }
-      summary::-webkit-details-marker {
-        display: none;
-      }
+
       details[open] .menu {
         animation-name: menuAnim;
       }
@@ -114,10 +79,7 @@ body {
       .menu {
         height: 0;
         width: fit-content;
-        border-radius: var(--cornerRad);
-        background-color: var(--primColor);
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-        margin-top: 8px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -125,8 +87,6 @@ body {
         animation: closeMenu 300ms ease-in-out forwards;
       }
       .menu a {
-        padding: 12px 24px;
-        margin: 0 16px;
         color: var(--secoColor);
         border-bottom: 2px solid rgba(0, 0, 0, 0.1);
         text-decoration: none;
@@ -135,21 +95,6 @@ body {
       }
       .menu a:nth-of-type(1) {
         padding-top: 24px;
-      }
-      .menu a:nth-last-of-type(1) {
-        border-bottom: none;
-      }
-
-      details::before {
- 
-        color: var(--secoColor);
-        position: absolute;
-        margin-left: 80px;
-        padding: 10px 10px;
-        opacity: 0.4;
-      }
-      details[open]::before {
-        animation: fadeMe 300ms linear forwards;
       }
 
         .menu a:hover {
@@ -176,19 +121,60 @@ body {
       
       
   }
+
+
 @media screen and (min-width:768px) {
     .menu-details {
-        position: absolute;
-        left: -9999em;
+      display:none;
     }    
 }
 
+/*////////////////
+/////  Nav Computer
+/////////////////*/
 
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.50rem;
+  border-bottom: 0.25rem outset #FFD700;
+  background-color: #F5F5DC;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-logo {
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.img-logo {
+  width: 4.7rem;
+  height: 4.7rem;
+  animation: rotate 10s linear infinite;
+}
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-links li a {
@@ -196,14 +182,15 @@ body {
     text-decoration: none;
 }
 
-.nav-links li {
-    cursor: pointer;
-}
 
 
-.nav-links li:hover {
+.nav-links a:hover {
     color: #FFD700;
 }
+
+/*////////////////
+/////  Main / Section
+/////////////////*/
 
 main {
     flex:1;
@@ -231,6 +218,11 @@ main {
 
 }
 
+.main-content h3 {
+  font-size: 2.5rem;
+
+}
+
 .main-content p {
     font-size: 1.5rem;
  
@@ -245,36 +237,10 @@ main {
     border-radius: 0.25rem;
 }
 
-.btn-cta:hover {
-    background-color: #FFC400;
-}
 
-.about-section {
-    padding: 4rem;
-}
-
-.about-section h3 {
-    font-size: 2rem;
-}
-
-.about-section p {
-    font-size: 1.25rem;
-    line-height: 1.8;
-}
-
-.btn-more {
-    display: inline-block;
-    background-color: #FFD700;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 0.25rem;
-
-}
-
-.btn-more:hover {
-    background-color: #FFC400;
-}
+/*////////////////
+/////  Footer 
+/////////////////*/
 
 
 .footer {
@@ -284,7 +250,24 @@ main {
     padding: 1rem;
 }
 
-footer p {
- 
+/*////////////////
+/////  SHOP
+/////////////////*/
+
+
+.shop-section {
+  height: 90svh;
+  background-image: url("https://www.marieblachere.com/wp-content/uploads/2019/07/01-header.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  overflow-x: hidden !important;
+
 }
 
+/*////////////////
+/////  About
+/////////////////*/
