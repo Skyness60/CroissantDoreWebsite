@@ -253,6 +253,37 @@ main {
 }
 
 /*////////////////
+/////  About
+/////////////////*/
+.about-section {
+  height: 30vh;
+  background-image: url('https://www.petitscommerces.fr/wp-content/uploads/elementor/thumbs/LAdrienne-boulangerie-p%C3%A2tisserie-44-rue-du-commerce-94310-Orly-%C2%A9Petitscommerces-9-oexvv0p17vqwori41yaxyelwv5fea2o54mkhd1ly1o.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.desc-content {
+  text-align: center;s
+}
+
+.footer-content {
+  height: 30vh;
+  background-image: url('https://www.epitech.eu/fr/wp-content/uploads/2019/02/Groupe-Blind-Epitech-Paris-1-1024x484.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+/*////////////////
 /////  Coordinate Desktop
 /////////////////*/
 
