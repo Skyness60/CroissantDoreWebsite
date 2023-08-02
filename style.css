@@ -130,7 +130,7 @@ body {
 }
 
 /*////////////////
-/////  Nav Computer
+/////  Nav desktop 
 /////////////////*/
 
 
@@ -271,3 +271,14 @@ main {
 /*////////////////
 /////  About
 /////////////////*/
+
+.cordinate-section {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
